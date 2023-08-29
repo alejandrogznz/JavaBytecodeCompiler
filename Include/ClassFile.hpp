@@ -1,0 +1,9 @@
+#ifndef JAVABYTECODECOMPILER_INCLUDE_CLASSFILE_HPP
+#define JAVABYTECODECOMPILER_INCLUDE_CLASSFILE_HPP
+
+class ClassFile {
+public:
+    ClassFile();
+};
+
+#endif //
