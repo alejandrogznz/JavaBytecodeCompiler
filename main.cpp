@@ -5,9 +5,9 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     for (int i = 0; i < argc; ++i) {
-        cout << argv[i] << endl;
+        //cout << argv[i] << endl;
     }
 
-    ClassFile f;
+    ClassFile f(argv[1]);
     return 0;
 }
