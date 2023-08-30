@@ -11,6 +11,9 @@ ClassFile::ClassFile(char *filename) {
     std::ifstream file(filename, std::ios::binary);
     
     this->magic_number = readUnsignedInt(file);
+    this->minor_version = readUnsignedShortInt(file);
+    this->major_version = readUnsignedShortInt(file);
+    this->constant_pool_count = readUnsignedShortInt(file);
 
     printClassFile();
 }
@@ -40,4 +43,9 @@ unsigned short int ClassFile::readUnsignedShortInt(std::ifstream &openfile) {
 
 void ClassFile::printClassFile() {
     std::cout << "Magic Number: 0x" << std::hex << this->magic_number << std::endl;
+    std::cout << "Minor Version: 0x" << std::hex << this->minor_version << std::endl;
+    std::cout << "Major Version: 0x" << this->major_version << std::endl;
+    std::cout << "Constant Pool Count: 0x" << this->constant_pool_count << std::endl;
+
+
 }
